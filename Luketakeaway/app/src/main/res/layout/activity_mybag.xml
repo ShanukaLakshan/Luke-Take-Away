@@ -1,279 +1,228 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraint1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MybagActivity">
+    tools:context=".Activity.MybagActivityTest">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"></LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/squres" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:background="@null"
-            android:drawableEnd="@drawable/search"
-            android:drawablePadding="8dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Search"
-            android:textAlignment="textEnd"
-            android:textColor="#626473" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="My Bag"
-            android:textColor="#556EE6"
-            android:textSize="25dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_marginLeft="16dp"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="$22.50"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/coordinatorLayout">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:paddingLeft="32dp"
-            android:paddingRight="32dp">
-
-            <TextView
-                android:id="@+id/itemstotal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Items Total :"
-                android:textColor="#626473"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/currency1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="$"
-                android:textColor="#626473" />
-
-            <TextView
-                android:id="@+id/itemstotalvalue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="22.50"
-                android:textColor="#626473" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:paddingLeft="32dp"
-            android:paddingRight="32dp">
-
-            <TextView
-                android:id="@+id/delivery"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Delivery Fee :"
-                android:textColor="#626473"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/currency2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="$"
-                android:textColor="#626473" />
-
-            <TextView
-                android:id="@+id/deliveryvalue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="22.50"
-                android:textColor="#626473" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:paddingLeft="32dp"
-            android:paddingRight="32dp">
-
-            <TextView
-                android:id="@+id/tax"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Tax :"
-                android:textColor="#626473"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/currency3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="$"
-                android:textColor="#626473" />
-
-            <TextView
-                android:id="@+id/taxvalue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="22.50"
-                android:textColor="#626473" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
-            android:orientation="horizontal"
-            android:paddingLeft="32dp"
-            android:paddingRight="32dp">
-
-            <TextView
-                android:id="@+id/totalfee"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Total Fee :"
-                android:textColor="#626473"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/currency4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="$"
-                android:textColor="#626473"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/totalfeevalue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="22.50"
-                android:textColor="#626473"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="32dp"
-            android:background="@drawable/blue_btn"
-            android:gravity="center"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Checkout"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-        </LinearLayout>
-    </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Shanu"
+                    android:textColor="@color/maincolor"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/textView5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:text="Order and Eat"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView4"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="32dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView4"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/profile" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/banner" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:layout_marginEnd="40dp"
+                        android:text="50% Free"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="12 Sep"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="@+id/textView6"
+                        app:layout_constraintStart_toStartOf="@+id/textView6"
+                        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/orange_light_banner"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/textView7"
+                        app:layout_constraintStart_toStartOf="@+id/textView7"
+                        app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="Order Now"
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="17"
+                    android:inputType="textPersonName"
+                    android:hint="Search Food"
+                    android:textStyle="italic"
+                    android:background="@drawable/search_background"
+                    android:drawableStart="@drawable/search"
+                    android:paddingStart="20dp"
+                    android:drawablePadding="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Categories"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName3"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Popular"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView9"
+                    app:layout_constraintTop_toBottomOf="@+id/recyclerView2" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recyclerView3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:id="@+id/coordinatorLayout"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        app:layout_constraintBottom_toBottomOf="@+id/constraint1"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_above="@+id/bottombar"
-            android:background="#626473"></View>
+        app:layout_constraintStart_toStartOf="parent"
+        >
 
         <com.google.android.material.bottomappbar.BottomAppBar
-            android:id="@+id/bottombar"
+            android:id="@+id/app_bar"
             android:layout_width="match_parent"
-            android:layout_height="99dp"
-            android:layout_gravity="bottom">
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/white"
+            app:fabCradleMargin="8dp"
+            app:fabCradleRoundedCornerRadius="50dp"
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:weightSum="4"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -286,8 +235,8 @@
 
                     <ImageView
                         android:id="@+id/menu_icon"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         app:srcCompat="@drawable/menu" />
 
                     <TextView
@@ -295,7 +244,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Menu"
-                        android:textSize="10sp"
+                        android:textSize="12sp"
                         tools:layout_marginTop="5dp" />
                 </LinearLayout>
 
@@ -309,8 +258,8 @@
 
                     <ImageView
                         android:id="@+id/graph_icon"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         app:srcCompat="@drawable/graph" />
 
                     <TextView
@@ -320,7 +269,7 @@
                         android:layout_marginTop="5dp"
                         android:autoSizeMaxTextSize="10sp"
                         android:text="My Orders"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -333,8 +282,8 @@
 
                     <ImageView
                         android:id="@+id/bag_icon"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         app:srcCompat="@drawable/bag" />
 
                     <TextView
@@ -344,7 +293,7 @@
                         android:layout_marginTop="5dp"
                         android:autoSizeMaxTextSize="10sp"
                         android:text="My Bag"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -357,8 +306,8 @@
 
                     <ImageView
                         android:id="@+id/bell_icon"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         app:srcCompat="@drawable/bell" />
 
                     <TextView
@@ -368,11 +317,10 @@
                         android:layout_marginTop="5dp"
                         android:autoSizeMaxTextSize="10sp"
                         android:text="Notifications"
-                        android:textSize="10sp" />
+                        android:textSize="11sp" />
                 </LinearLayout>
 
             </LinearLayout>
-
         </com.google.android.material.bottomappbar.BottomAppBar>
 
 

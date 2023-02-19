@@ -11,15 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Luketakeaway"
         tools:targetApi="31">
+
         <activity
-            android:name=".MybagActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".MainActivity"
+            android:name=".Activity.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,8 +25,11 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".RegisterActivity" />
+        <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".Activity.RegisterActivity" />
+        <activity android:name=".Activity.MybagActivityTest" />
+        <activity android:name=".Activity.HomeActivity" />
+        <activity android:name=".Activity.MyOrdersActivity" />
     </application>
 
 </manifest>

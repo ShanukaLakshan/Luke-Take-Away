@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Luketakeaway</string>
+    <string-array name="Type">
+        <item>All</item>
+        <item>Pending</item>
+        <item>Canceled</item>
+        <item>Completed</item>
+    </string-array>
+
 </resources>
