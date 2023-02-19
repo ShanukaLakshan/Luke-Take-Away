@@ -9,5 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="purple">#8692f7</color>
     <color name="maincolor">#5E73E3</color>
+    <color name="blue_accent">#556EE6</color>
+    <color name="secondary_text">#626473</color>
+    <color name="main_text">#353A3F</color>
 
 </resources>
